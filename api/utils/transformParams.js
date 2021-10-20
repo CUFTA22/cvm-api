@@ -1,5 +1,5 @@
 const transformParams = (personalInfo, experience, template) => {
-    const name = JSON.parse(template).id;
+    const name = template.id;
     const params = {
         personalInfo,
         experience,
