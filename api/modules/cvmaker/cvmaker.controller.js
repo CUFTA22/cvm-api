@@ -10,7 +10,7 @@ import * as svc from './cvmaker.service';
 export const handlePost = async (req, res) => {
     const { data } = req.body;
 
-    const { personalInfo, experience, template } = JSON.parse(data);
+    const { personalInfo, experience, template } = data;
 
     const { name, params } = transformParams(personalInfo, experience, template);
 
