@@ -40,7 +40,7 @@ body {
 }
 .info_row {
   margin-bottom: 20px;
-  width: 700px;
+  width: fit-content;
   height: 20px;
   position: relative;
   font-size: 22px;

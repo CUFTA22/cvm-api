@@ -133,11 +133,11 @@ export const mapPersonal3 = (personal) => {
     result = result.concat(`
         <div style="font-size: 22px; margin: 10px 0" class="row col-lg-8 mx-auto">      
             ${findIcon('address', 'section_icon')}
-            <span style="margin-right: 14px">${personal['address'].val}</span>
+            <span style="margin-right: 14px">${personal['address'].title}</span>
             ${findIcon('phone', 'section_icon')}
-            <span style="margin-right: 14px">${personal['phone'].val}</span>
+            <span style="margin-right: 14px">${personal['phone'].title}</span>
             ${findIcon('email', 'section_icon')}
-            <span style="margin-right: 14px">${personal['email'].val}</span>
+            <span style="margin-right: 14px">${personal['email'].title}</span>
         </div>
         <hr />
         <div class="interests_info col-lg-8 mx-auto">
@@ -152,7 +152,7 @@ export const mapPersonal3 = (personal) => {
         if (key !== 'name')
             result = result.concat(`
             <span class="personal_info">
-                <div class="exp_bold">${personal[key]?.val}</div>
+                <div class="exp_bold">${personal[key]?.title}</div>
                 <div>${personal[key]?.val}</div>
             </span>
         `);

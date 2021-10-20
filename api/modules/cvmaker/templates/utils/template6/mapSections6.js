@@ -131,7 +131,7 @@ export const mapPersonal6 = (personal, experience) => {
                 ${findIcon(key, 'left_section_icon color_main_svg')}
     
                 <div class="data_wrapper">
-                  <div class="exp_bold">${personal[key].val}</div>
+                  <div class="exp_bold">${personal[key].title}</div>
                   <div style="margin-bottom: 16px">${personal[key].val}</div>
                 </div>
               </div>
