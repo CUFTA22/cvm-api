@@ -3,8 +3,8 @@ import tempData from '../modules/cvmaker/fullReq.json';
 const transformParams = (personalInfo, experience, template) => {
     const name = JSON.parse(template).id;
     const params = {
-        personalInfo: tempData.personalInfo,
-        experience: tempData.experience,
+        personalInfo: JSON.parse(personalInfo),
+        experience: JSON.parse(experience),
         template: JSON.parse(template),
     };
 
