@@ -1,6 +1,6 @@
 const styles = (mainColor, lighterColor) => `
 html {
-  zoom: 1;
+  zoom: 0.4;
 }
 .rule {
   border-bottom: 1px solid black;
