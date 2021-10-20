@@ -3,7 +3,7 @@ const styles = (mainColor, lighterColor) => `
     fill: ${mainColor};
   }
   html {
-    zoom: 0.7;
+    zoom: 0.4;
   }
   .doc_wrapper {
     display: table;

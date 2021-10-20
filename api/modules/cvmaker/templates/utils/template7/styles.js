@@ -20,7 +20,7 @@ const styles = (mainColor, lighterColor) => `
   color: white;
 }
 html {
-  zoom: 0.7;
+  zoom: 0.4;
 }
 .rule {
   border-bottom: 1px solid black;
