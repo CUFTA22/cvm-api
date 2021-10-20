@@ -9,13 +9,11 @@ import * as svc from './cvmaker.service';
 
 export const handlePost = async (req, res) => {
     const { data } = req.body;
-    console.log(data);
+    const parsedData = JSON.parse(data);
 
-    // const { personalInfo, experience, template } = JSON.parse(data);
+    const { personalInfo, experience, template } = parsedData;
 
-    // const { name, params } = transformParams(personalInfo, experience, template);
+    const { name, params } = transformParams(personalInfo, experience, template);
 
-    // svc.createPdf(name, params, req.file, res);
-
-    res.send(JSON.parse(data));
+    svc.createPdf(name, params, req.file, res);
 };
