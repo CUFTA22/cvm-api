@@ -1,0 +1,17 @@
+node_modules
+*.swp
+*.swo
+*.zip
+.env
+
+*.log
+uploads
+.idea/
+.idea/workspace.xml
+.vscode/
+.vscode/*
+.DS_Store
+
+.env
+
+package-lock.json
