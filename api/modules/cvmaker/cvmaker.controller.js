@@ -19,3 +19,16 @@ export const handlePost = async (req, res) => {
 
     svc.createPdf(name, params, req.file, res);
 };
+
+export const handlePostFile = async (req, res) => {
+    const { data } = req.body;
+
+    const parsedData = JSON.parse(data);
+    // const parsedData = tempData;
+
+    const { personalInfo, experience, template } = parsedData;
+
+    const { name, params } = transformParams(personalInfo, experience, template);
+
+    svc.createPdfFile(name, params, req.file, res);
+};

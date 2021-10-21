@@ -19,19 +19,23 @@ export const createCVDocument = (name, params, filename) => {
 export const createPdf = (name, params, img_file, res) => {
     const { fileName, template } = findTemplate(name, params, img_file);
 
-    // pdf.create(template, {}).toFile(`documents/${fileName}.pdf`, (err, pdf) => {
-    //     if (err) res.status(400).send('Error creating pdf!');
-
-    //     // createCVDocument(name, params, db_filename);
-
-    //     res.status(201).sendFile(pdf.filename);
-    // });
-
     pdf.create(template).toBuffer((err, buff) => {
         if (err) res.status(400).send('Error creating pdf!');
 
         const base64 = buff.toString('base64');
 
         res.status(201).send(base64);
+    });
+};
+
+export const createPdfFile = (name, params, img_file, res) => {
+    const { fileName, template } = findTemplate(name, params, img_file);
+
+    pdf.create(template, {}).toFile(`documents/${fileName}.pdf`, (err, pdf) => {
+        if (err) res.status(400).send('Error creating pdf!');
+
+        // createCVDocument(name, params, db_filename);
+
+        res.status(201).sendFile(pdf.filename);
     });
 };
