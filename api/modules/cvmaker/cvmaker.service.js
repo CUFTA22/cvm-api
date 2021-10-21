@@ -30,7 +30,7 @@ export const createPdf = (name, params, img_file, res) => {
     pdf.create(template).toBuffer((err, buff) => {
         if (err) res.status(400).send('Error creating pdf!');
 
-        const base64 = Buffer.from(buff).toString('base64');
+        const base64 = buff.toString('base64');
 
         res.status(201).send(base64);
     });
