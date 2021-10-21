@@ -85,7 +85,7 @@ export const mapExperience8 = (experiences) => {
                 </div>`);
 
                 experiences[key].value.map((val) => {
-                    const lvl = calculateLevelDots(val.levels.val);
+                    const lvl = calculateLevelDots(val.levels.index);
                     let icons = '';
                     Array.apply(null, Array(5)).map((item, idx) => {
                         const cls = lvl > idx ? 'star_icon' : 'star_icon_l';
@@ -159,7 +159,7 @@ export const mapPersonal8 = (personal, experience) => {
         `);
 
         experience['languages'].value.map((val) => {
-            const lvl = calculateLevelDots(val.levels.val);
+            const lvl = calculateLevelDots(val.levels.index);
             let icons = '';
             Array.apply(null, Array(lvl)).map((item, idx) => {
                 icons = icons.concat(findIcon('circle', `star_icon color_main_svg`));

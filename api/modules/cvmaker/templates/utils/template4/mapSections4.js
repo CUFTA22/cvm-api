@@ -1,4 +1,4 @@
-import { calculateLevelDots, calculateLevelPrecent } from '../../../../../utils/calculateLevel';
+import { calculateLevelPrecent } from '../../../../../utils/calculateLevel';
 import getDate from '../../../../../utils/getDate';
 
 export const mapExperience4 = (experiences) => {
@@ -89,7 +89,7 @@ export const mapExperience4 = (experiences) => {
               <hr />`);
 
                 experiences[key].value.map((val) => {
-                    const lvl = calculateLevelPrecent(val.levels.val);
+                    const lvl = calculateLevelPrecent(val.levels.index);
 
                     result = result.concat(`
                     <div class="skill_row">

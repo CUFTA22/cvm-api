@@ -1,6 +1,6 @@
 import transformParams from '../../utils/transformParams';
 import * as svc from './cvmaker.service';
-
+import tempData from './fullReq.json';
 /**
  * Generate CV PDF
  * @param {object} something
@@ -9,7 +9,9 @@ import * as svc from './cvmaker.service';
 
 export const handlePost = async (req, res) => {
     const { data } = req.body;
+
     const parsedData = JSON.parse(data);
+    // const parsedData = tempData;
 
     const { personalInfo, experience, template } = parsedData;
 

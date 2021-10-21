@@ -89,7 +89,7 @@ export const mapExperience9 = (experiences) => {
                                 </div>
                                  <hr />`);
                 experiences[key].value.map((val) => {
-                    const lvl = calculateLevelDots(val.levels.val);
+                    const lvl = calculateLevelDots(val.levels.index);
                     let icons = '';
                     Array.apply(null, Array(5)).map((item, idx) => {
                         const cls = lvl > idx ? 'star_icon' : 'star_icon_l';
