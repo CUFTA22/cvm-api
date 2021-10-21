@@ -132,7 +132,7 @@ export const mapPersonal6 = (personal, experience) => {
     
                 <div class="data_wrapper">
                   <div class="exp_bold">${personal[key].title}</div>
-                  <div style="margin-bottom: 16px">${personal[key].val}</div>
+                  <div style="margin-bottom: 16px">${personal[key].value}</div>
                 </div>
               </div>
         `);

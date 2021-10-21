@@ -150,7 +150,7 @@ export const mapPersonal2 = (personal) => {
         result = result.concat(`
             <div class="info_row">
                 <span class="row_label">${personal[key]?.title}</span>
-                <span class="row_data exp_bold">${personal[key]?.val}</span>
+                <span class="row_data exp_bold">${personal[key]?.value}</span>
             </div>
         `);
     }

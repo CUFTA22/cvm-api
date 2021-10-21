@@ -145,7 +145,7 @@ export const mapPersonal9 = (personal) => {
 
     for (const key in personal) {
         result = result.concat(`
-        <div class="personal_row"> <span>${personal[key].title}</span>          <span class="personal_data">${personal[key].val}</span> </div>
+        <div class="personal_row"> <span>${personal[key].title}</span>          <span class="personal_data">${personal[key].value}</span> </div>
         `);
     }
     return result;
