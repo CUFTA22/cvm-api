@@ -1,9 +1,12 @@
 import { calculateLevelDots } from '../../../../../utils/calculateLevel';
 import getDate from '../../../../../utils/getDate';
+import sortByOrder from '../../../../../utils/sortByOrder';
 import findIcon from '../../findIcon';
 
 export const mapExperience9 = (experiences) => {
     let result = '';
+
+    experiences = sortByOrder(experiences);
 
     if (experiences?.resumeObjective) {
         result = result.concat(`

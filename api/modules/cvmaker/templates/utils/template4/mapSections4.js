@@ -1,8 +1,11 @@
 import { calculateLevelPrecent } from '../../../../../utils/calculateLevel';
 import getDate from '../../../../../utils/getDate';
+import sortByOrder from '../../../../../utils/sortByOrder';
 
 export const mapExperience4 = (experiences) => {
     let result = '';
+
+    experiences = sortByOrder(experiences);
 
     if (experiences?.resumeObjective) {
         result = result.concat(`

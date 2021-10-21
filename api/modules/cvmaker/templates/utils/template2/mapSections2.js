@@ -1,8 +1,10 @@
 import getDate from '../../../../../utils/getDate';
-import findIcon from '../../findIcon';
+import sortByOrder from '../../../../../utils/sortByOrder';
 
 export const mapExperience2 = (experiences) => {
     let result = '';
+
+    experiences = sortByOrder(experiences);
 
     if (experiences?.resumeObjective) {
         result = result.concat(`
