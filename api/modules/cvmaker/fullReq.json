@@ -213,5 +213,5 @@
         "customSection2": { "title": "Kastm sekcija 2", "value": "<p>Tekst za kastm sekciju</p>" },
         "resumeObjective": { "title": "Resume Objective", "value": "<p>OBJECTIVE</p>" }
     },
-    "template": { "id": 1, "color": "#ffffff" }
+    "template": { "title": "template5", "value": "#424242" }
 }

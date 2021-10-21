@@ -10,7 +10,7 @@ export const mapExperience5 = (experiences) => {
         <hr />
         <div class="section_head row mx-auto">
             <div class="icon_border">
-                ${findIcon(key, 'section_icon')}
+                ${findIcon('', 'section_icon')}
             </div>
             <div class="txt">${experiences?.resumeObjective.title}</div>
         </div>

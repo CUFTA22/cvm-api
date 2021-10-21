@@ -39,13 +39,13 @@ export const mapExperience2 = (experiences) => {
                     result = result.concat(`
                     <div style="margin-bottom: 40px" class="col-lg-8 mx-auto">
                         <div class="info_row">
-                            <span class="row_label">${getDate(val.start_date.val)} - ${getDate(val.end_date.val)}</span>
-                            <span class="row_data exp_bold">${val.main.val}</span>
+                            <div class="row_label">${getDate(val.start_date.val)} - ${getDate(val.end_date.val)}</div>
+                            <div class="row_data exp_bold">${val.main.val}</div>
                         </div>
                         <div class="info_row">
-                            <span class="row_data">${val.third.val}, <i>${val.second.val}</i></span>
+                            <div class="row_data">${val.third.val}, <i>${val.second.val}</i></div>
                         </div>
-                        <div class="info_row"><span class="row_data">${val.textEditor.val}</span></div>
+                        <div class="info_row"><div class="row_data">${val.textEditor.val}</div></div>
                     </div>
                     `);
                 });
