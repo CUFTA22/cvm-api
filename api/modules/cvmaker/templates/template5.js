@@ -12,7 +12,7 @@ export const template5 = (params, image) => {
 
     const img_src = image ? `data:${image.mimetype};base64,${image.buffer.toString('base64')}` : '';
 
-    const mainColor = template.color;
+    const mainColor = template.value;
     const lighterColor = adjustColor(mainColor, 140);
 
     // Generate content

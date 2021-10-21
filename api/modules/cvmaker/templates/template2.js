@@ -11,7 +11,7 @@ export const template2 = (params, image) => {
 
     const img_src = image ? `data:${image.mimetype};base64,${image.buffer.toString('base64')}` : '';
 
-    const mainColor = template.color;
+    const mainColor = template.value;
 
     // Generate content
     const css = styles(mainColor);

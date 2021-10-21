@@ -13,7 +13,7 @@ export const template8 = (params, image) => {
 
     const img_src = image ? `data:${image.mimetype};base64,${image.buffer.toString('base64')}` : '';
 
-    const mainColor = template.color;
+    const mainColor = template.value;
     const darkerColor = adjustColor(mainColor, -69);
     const lighterColor = adjustColor(mainColor, 120);
 
