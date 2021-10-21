@@ -7,10 +7,10 @@ const transformParams = (personalInfo, experience, template) => {
     };
 
     params.personalInfo = {
-        name: { val: `${params.personalInfo.firstName.val} ${params.personalInfo.lastName.val}`, title: 'name' },
+        name: { val: `${params.personalInfo.firstName.value} ${params.personalInfo.lastName.vvalueal}`, title: 'name' },
         ...params.personalInfo,
         address: {
-            val: `${params.personalInfo.address.val}, ${params.personalInfo.postcode.val} ${params.personalInfo.city.val}`,
+            val: `${params.personalInfo.address.value}, ${params.personalInfo.postcode.value} ${params.personalInfo.city.value}`,
             title: 'address',
         },
     };
