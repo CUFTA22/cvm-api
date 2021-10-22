@@ -6,7 +6,7 @@ import findIcon from '../../findIcon';
 export const mapExperience9 = (experiences) => {
     let result = '';
 
-    experiences = sortByOrder(experiences);
+    // experiences = sortByOrder(experiences);
 
     if (experiences?.resumeObjective) {
         result = result.concat(`

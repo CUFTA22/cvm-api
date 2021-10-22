@@ -5,7 +5,7 @@ import sortByOrder from '../../../../../utils/sortByOrder';
 export const mapExperience4 = (experiences) => {
     let result = '';
 
-    experiences = sortByOrder(experiences);
+    // experiences = sortByOrder(experiences);
 
     if (experiences?.resumeObjective) {
         result = result.concat(`
