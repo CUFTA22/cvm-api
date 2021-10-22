@@ -60,6 +60,60 @@
                     "stillActive": { "required": false, "val": null, "label": "Ich arbeite jetzt." },
                     "textEditor": { "required": false, "val": "<p>Was sweet</p>", "label": "Beschreibung" },
                     "index": 0
+                },
+                {
+                    "main": { "required": false, "val": "Software Engineer", "label": "Grad" },
+                    "second": { "required": false, "val": "Nis", "label": "Stadt" },
+                    "third": { "required": false, "val": "PMF", "label": "Schule" },
+                    "start_date": {
+                        "required": false,
+                        "val": { "month": "September", "year": 2007 },
+                        "label": "Start Datum"
+                    },
+                    "end_date": {
+                        "required": false,
+                        "val": { "month": "November", "year": 2011 },
+                        "label": "End Datum"
+                    },
+                    "stillActive": { "required": false, "val": null, "label": "Ich arbeite jetzt." },
+                    "textEditor": { "required": false, "val": "<p>Was sweet</p>", "label": "Beschreibung" },
+                    "index": 1
+                },
+                {
+                    "main": { "required": false, "val": "Software Engineer", "label": "Grad" },
+                    "second": { "required": false, "val": "Nis", "label": "Stadt" },
+                    "third": { "required": false, "val": "PMF", "label": "Schule" },
+                    "start_date": {
+                        "required": false,
+                        "val": { "month": "September", "year": 2007 },
+                        "label": "Start Datum"
+                    },
+                    "end_date": {
+                        "required": false,
+                        "val": { "month": "November", "year": 2011 },
+                        "label": "End Datum"
+                    },
+                    "stillActive": { "required": false, "val": null, "label": "Ich arbeite jetzt." },
+                    "textEditor": { "required": false, "val": "<p>Was sweet</p>", "label": "Beschreibung" },
+                    "index": 2
+                },
+                {
+                    "main": { "required": false, "val": "Software Engineer", "label": "Grad" },
+                    "second": { "required": false, "val": "Nis", "label": "Stadt" },
+                    "third": { "required": false, "val": "PMF", "label": "Schule" },
+                    "start_date": {
+                        "required": false,
+                        "val": { "month": "September", "year": 2007 },
+                        "label": "Start Datum"
+                    },
+                    "end_date": {
+                        "required": false,
+                        "val": { "month": "November", "year": 2011 },
+                        "label": "End Datum"
+                    },
+                    "stillActive": { "required": false, "val": null, "label": "Ich arbeite jetzt." },
+                    "textEditor": { "required": false, "val": "<p>Was sweet</p>", "label": "Beschreibung" },
+                    "index": 3
                 }
             ]
         },
@@ -69,7 +123,7 @@
             "value": [
                 {
                     "main": { "required": false, "val": "English", "label": "Sprache" },
-                    "levels": { "required": false, "val": "dazwischenliegend", "label": "Niveau" },
+                    "levels": { "required": false, "val": "dazwischenliegend", "index": 0, "label": "Niveau" },
                     "index": 0
                 }
             ]
@@ -80,42 +134,42 @@
             "value": [
                 {
                     "main": { "required": false, "val": "Javascript", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Experte", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Experte", "index": 2, "label": "Niveau" },
                     "index": 0
                 },
                 {
                     "main": { "required": false, "val": "CSS", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Experte", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Experte", "index": 0, "label": "Niveau" },
                     "index": 1
                 },
                 {
                     "main": { "required": false, "val": "Vue/Nuxt js", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Experte", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Experte", "index": 3, "label": "Niveau" },
                     "index": 2
                 },
                 {
                     "main": { "required": false, "val": "Node js", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Geschickt", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Geschickt", "index": 4, "label": "Niveau" },
                     "index": 3
                 },
                 {
                     "main": { "required": false, "val": "HTML 5", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Erfahren", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Erfahren", "index": 2, "label": "Niveau" },
                     "index": 4
                 },
                 {
                     "main": { "required": false, "val": "PHP", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Geschickt", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Geschickt", "index": 1, "label": "Niveau" },
                     "index": 5
                 },
                 {
                     "main": { "required": false, "val": "Python", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Geschickt", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Geschickt", "index": 3, "label": "Niveau" },
                     "index": 6
                 },
                 {
                     "main": { "required": false, "val": "React/Next js", "label": "Fähigkeit" },
-                    "levels": { "required": false, "val": "Geschickt", "label": "Niveau" },
+                    "levels": { "required": false, "val": "Geschickt", "index": 2, "label": "Niveau" },
                     "index": 7
                 }
             ]
@@ -213,5 +267,5 @@
         "customSection2": { "title": "Kastm sekcija 2", "value": "<p>Tekst za kastm sekciju</p>" },
         "resumeObjective": { "title": "Resume Objective", "value": "<p>OBJECTIVE</p>" }
     },
-    "template": { "title": "template5", "value": "#424242" }
+    "template": { "title": "template6", "value": "#424242" }
 }

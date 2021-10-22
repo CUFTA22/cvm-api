@@ -1,5 +1,5 @@
 export const CORS_OPTIONS = {
-    origin: ['http://localhost:3000', process.env.FRONT_URL],
+    origin: ['http://localhost:3000', 'https://cv.jonder.jobs', process.env.FRONT_URL],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization', '*'],
     credentials: true,

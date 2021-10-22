@@ -11,6 +11,9 @@ const styles = (mainColor, lighterColor, darkerColor) => `
 html {
   zoom: 0.4;
 }
+.pb_before { page-break-before: always !important; } /* Breaks page before of element */
+.pb_after  { page-break-after: always !important; } /* Breaks page after of element */
+.pbi_avoid { page-break-inside: avoid !important; } /* Avoid breaks page in element */
 .rule {
   border-bottom: 1px solid black;
   width: 80%;
