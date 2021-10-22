@@ -8,6 +8,7 @@ import uploadFiles from '../../middlewares/upload';
 const router = Router();
 
 // router.post('/', postRules(), validate, catchAsyncError(ctrl.handlePost));
+
 router.post('/', uploadFiles, catchAsyncError(ctrl.handlePost));
 router.post('/file', uploadFiles, catchAsyncError(ctrl.handlePostFile));
 
