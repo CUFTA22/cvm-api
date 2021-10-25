@@ -7,19 +7,19 @@ export const mapExperience4 = (experiences) => {
 
     // experiences = sortByOrder(experiences);
 
-    if (experiences?.resumeObjective) {
+    if (experiences?.profileData) {
         result = result.concat(`
             <div class="section_head row mx-auto">
-            <span>${experiences?.resumeObjective.title}</span>
+            <span>${experiences?.profileData.title}</span>
             </div>
             <hr />
 
             <div class="objectives_text mx-auto">
-                ${experiences?.resumeObjective.value}
+                ${experiences?.profileData.value}
             </div>
                  `);
 
-        delete experiences?.resumeObjective;
+        delete experiences?.profileData;
     }
 
     for (const key in experiences) {

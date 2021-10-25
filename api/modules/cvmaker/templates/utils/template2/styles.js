@@ -40,20 +40,22 @@ body {
 }
 .info_row {
   margin-bottom: 20px;
-  width: 1100px;
-  height: 20px;
+  display: table;
+  width: 100%;
+  height: fit-content;
   position: relative;
   font-size: 22px;
-
 }
 .row_label {
-  position: absolute;
-  right: 840px;
+  width: 12%;
+  display: table-cell;
   font-weight: 200;
+  text-align: right;
+  margin-right: 30px;
 }
 .row_data {
-  position: absolute;
-  left: 320px;
+  width: 80%;
+  margin-left: 70px;
 }
 .objectives_text {
   padding: 8px 16px;
@@ -78,6 +80,16 @@ body {
   margin: 6px 0;
   font-size: 20px;
 }
+.experience_left {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.experience_right {
+  display: inline-block;
+  margin-left: 240px;
+}
+
 .exp_bold {
   font-weight: 800;
 }

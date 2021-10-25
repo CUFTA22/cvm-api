@@ -38,10 +38,20 @@ const styles = (mainColor, lighterColor) => `
     fill: ${mainColor}
   }
   .personal_row {
-    margin: 6px 0; position: relative; display: flex; align-items: center; font-size: 22px;
+    margin: 6px 0;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: fit-content;
+    font-size: 22px;
+  }
+  .personal_label {
+    width: 10%;
+    display: table-cell;
   }
   .personal_data {
-    position: absolute; left: 260px;
+    width: 80%;
+    margin-left: 70px;
   }
   .objectives_text {
     padding: 8px 16px; font-size: 22px;
@@ -60,17 +70,21 @@ const styles = (mainColor, lighterColor) => `
   }
   .info_row {
     margin-bottom: 20px;
-    width: fit-content;
-    height: 20px;
+    display: table;
+    width: 100%;
+    height: fit-content;
     position: relative;
     font-size: 22px;
   }
   .row_label {
+    width: 9%;
+    display: table-cell;
     font-weight: 200;
+    margin-right: 30px;
   }
   .row_data {
-    position: absolute;
-    left: 260px;
+    width: 100%;
+    margin-left: 70px;
   }
   .exp_bold {
     font-weight: 800;
@@ -86,10 +100,6 @@ const styles = (mainColor, lighterColor) => `
   .skill_level {
     width: fit-content;
     height: fit-content;
-    position: absolute;
-    left: 270px;
-    top: 0;
-    text-align: left;
   }
   .star_icon {
     width: 16px;

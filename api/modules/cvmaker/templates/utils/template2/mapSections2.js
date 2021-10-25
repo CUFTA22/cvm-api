@@ -6,19 +6,19 @@ export const mapExperience2 = (experiences) => {
 
     // experiences = sortByOrder(experiences);
 
-    if (experiences?.resumeObjective) {
+    if (experiences?.profileData) {
         result = result.concat(`
         <hr />
         <div class="section_head col-lg-8 row mx-auto">
-            <span>${experiences?.resumeObjective.title}</span>
+            <span>${experiences?.profileData.title}</span>
         </div>
         
         <div class="interests_info col-lg-8 mx-auto">
-            ${experiences?.resumeObjective.value}
+            ${experiences?.profileData.value}
         </div>
                  `);
 
-        delete experiences?.resumeObjective;
+        delete experiences?.profileData;
     }
 
     for (const key in experiences) {
@@ -39,15 +39,19 @@ export const mapExperience2 = (experiences) => {
 
                 experiences[key].value.map((val) => {
                     result = result.concat(`
-                    <div style="margin-bottom: 40px" class="col-lg-8 mx-auto">
+                    <div style="margin-bottom: 40px;" class="col-lg-8 mx-auto">
                         <div class="info_row">
                             <div class="row_label">${getDate(val.start_date.val)} - ${getDate(val.end_date.val)}</div>
                             <div class="row_data exp_bold">${val.main.val}</div>
                         </div>
                         <div class="info_row">
+                            <div class="row_label"></div>
                             <div class="row_data">${val.third.val}, <i>${val.second.val}</i></div>
                         </div>
-                        <div class="info_row"><div class="row_data">${val.textEditor.val}</div></div>
+                        <div class="info_row">
+                            <div class="row_label"></div>    
+                            <div class="row_data">${val.textEditor.val}</div>
+                        </div>
                     </div>
                     `);
                 });

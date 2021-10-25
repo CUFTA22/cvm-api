@@ -7,16 +7,16 @@ export const mapExperience3 = (experiences) => {
 
     // experiences = sortByOrder(experiences);
 
-    if (experiences?.resumeObjective) {
+    if (experiences?.profileData) {
         result = result.concat(`
                 <hr />
                 
                 <div class="interests_info col-lg-8 mx-auto">
-                    ${experiences?.resumeObjective.value}
+                    ${experiences?.profileData.value}
                 </div>
                  `);
 
-        delete experiences?.resumeObjective;
+        delete experiences?.profileData;
     }
 
     for (const key in experiences) {
