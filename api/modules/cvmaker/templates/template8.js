@@ -50,7 +50,7 @@ export const template8 = (params, image) => {
                         <img class="user_img" src="${img_src}" alt="User avatar" />
                     </div>
                 </div>
-                <div class="banner_name">${personalInfo.name.val}</div>
+                <div class="banner_name">${personalInfo.name.value}</div>
             </div>
 
           <!-- ----------------------------------------------------------------------------------

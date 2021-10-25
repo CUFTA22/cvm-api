@@ -41,7 +41,7 @@ body {
 .doc_wrapper {
   display: table;
   width: 100%;
-  height: 2005px;
+  height: 3507px;
 }
 .left {
   display: inline-block;
@@ -155,7 +155,7 @@ body {
 }
 .experience_right {
   display: inline-block;
-  margin-left: 240px;
+  margin-left: 280px;
 }
 .exp_bold {
   font-weight: 600;
@@ -176,7 +176,7 @@ body {
   width: fit-content;
   height: fit-content;
   position: absolute;
-  left: 260px;
+  left: 300px;
   top: 0;
   text-align: left;
 }

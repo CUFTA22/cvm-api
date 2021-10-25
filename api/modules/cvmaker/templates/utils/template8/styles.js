@@ -27,7 +27,7 @@ body {
 .doc_wrapper {
   display: table;
   width: 100%;
-  height: 2005px;
+  height: 3507px;
 }
 .left {
   background-color: rgb(232, 233, 232);
@@ -41,7 +41,7 @@ body {
 .right {
   display: inline-block;
   height: 100%;
-  padding-top: 80px !important;
+  padding-top: 150px !important;
 }
 .section_head {
   padding: 8px 0;

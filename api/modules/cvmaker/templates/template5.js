@@ -73,7 +73,7 @@ export const template5 = (params, image) => {
           <div class="right col-12" style="padding: 20px">
             <div class="mx-auto" style="width: 100%; padding: 10px">
               <div class="mx-auto row">
-                <h1 style="font-size: 44px"><b>${personalInfo.name.val}</b></h1>
+                <h1 style="font-size: 44px"><b>${personalInfo.name.value}</b></h1>
               </div>
     
               ${experienceContent}

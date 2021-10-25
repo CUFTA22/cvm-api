@@ -8,7 +8,7 @@ const styles = (mainColor, lighterColor) => `
   .doc_wrapper {
     display: table;
     width: 100%;
-    height: 2005px;
+    height: 3507px;
   }
   .rule {
     border-bottom: 1px solid black;
@@ -129,6 +129,7 @@ const styles = (mainColor, lighterColor) => `
   .left_line {
     background-color: ${mainColor};
     width: 50px;
+    height: 10000px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -137,7 +138,6 @@ const styles = (mainColor, lighterColor) => `
   .doc_wrapper {
     padding: 0 30px 0 80px; 
     overflow: hidden; 
-    height: 100vh;
     display: table;
   }
 

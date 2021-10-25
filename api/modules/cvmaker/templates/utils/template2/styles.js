@@ -40,14 +40,15 @@ body {
 }
 .info_row {
   margin-bottom: 20px;
-  width: 700px;
+  width: 1100px;
   height: 20px;
   position: relative;
   font-size: 22px;
+
 }
 .row_label {
   position: absolute;
-  right: 440px;
+  right: 840px;
   font-weight: 200;
 }
 .row_data {

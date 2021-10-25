@@ -67,7 +67,7 @@ export const template6 = (params, image) => {
                 position: relative;
               "
             >
-              <b>${personalInfo.name.val}</b>
+              <b>${personalInfo.name.value}</b>
             </h1>
     
             <div class="user_img_wrapper">
