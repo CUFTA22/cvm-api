@@ -9,8 +9,6 @@ export const mapExperience3 = (experiences) => {
 
     if (experiences?.profileData) {
         result = result.concat(`
-                <hr />
-                
                 <div class="interests_info col-lg-8 mx-auto">
                     ${experiences?.profileData.value}
                 </div>
