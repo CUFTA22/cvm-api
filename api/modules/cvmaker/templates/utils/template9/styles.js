@@ -46,7 +46,7 @@ const styles = (mainColor, lighterColor) => `
     font-size: 22px;
   }
   .personal_label {
-    width: 18%;
+    width: 17%;
     display: table-cell;
   }
   .personal_data {
