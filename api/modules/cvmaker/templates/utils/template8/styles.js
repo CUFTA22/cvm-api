@@ -105,7 +105,7 @@ body {
   font-size: 22px;
 }
 .interests_section {
-  padding-left: 20px;
+  padding-left: 36px;
   list-style-type: square;
 }
 .skill_row {
