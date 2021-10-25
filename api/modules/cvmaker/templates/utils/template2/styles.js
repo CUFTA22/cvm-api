@@ -47,7 +47,7 @@ body {
   font-size: 22px;
 }
 .row_label {
-  width: 15%;
+  width: 18%;
   display: table-cell;
   font-weight: 200;
   text-align: right;
