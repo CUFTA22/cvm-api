@@ -137,7 +137,7 @@ body {
 }
 .experience_right {
   display: inline-block;
-  margin-left: 240px;
+  margin-left: 260px;
 }
 .exp_bold {
   font-weight: 600;
