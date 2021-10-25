@@ -1,4 +1,8 @@
 const styles = (mainColor, lighterColor) => `
+.pb_before { page-break-before: always !important; } /* Breaks page before of element */
+.pb_after  { page-break-after: always !important; } /* Breaks page after of element */
+.pbi_avoid { page-break-inside: avoid !important; } /* Avoid breaks page in element */
+
 .color_main_svg * {
     fill: ${mainColor};
   }
@@ -129,7 +133,6 @@ const styles = (mainColor, lighterColor) => `
   .left_line {
     background-color: ${mainColor};
     width: 50px;
-    height: 10000px;
     height: 100%;
     position: absolute;
     top: 0;

@@ -31,17 +31,17 @@ body {
 }
 .left {
   background-color: rgb(232, 233, 232);
-  box-shadow: inset -5px 0 2px #48494b;
-  display: inline-block;
-  width: 30%;
-  display: table-cell;
-  vertical-align: top;    
   padding-top: 180px !important;
+  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .right {
-  display: inline-block;
-  height: 100%;
-  padding-top: 150px !important;
+  width: 75%;
+  position: absolute;
+    top: 130px;
+    right: 0;
 }
 .section_head {
   padding: 8px 0;

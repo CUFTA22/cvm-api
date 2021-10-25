@@ -1,4 +1,8 @@
 const styles = (mainColor, lighterColor) => `
+.pb_before { page-break-before: always; } /* Breaks page before of element */
+.pb_after  { page-break-after: always; } /* Breaks page after of element */
+.pbi_avoid { page-break-inside: avoid; } /* Avoid breaks page in element */
+
 html {
   zoom: 0.4;
 }
