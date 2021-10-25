@@ -8,7 +8,7 @@ const styles = (mainColor, lighterColor) => `
   .doc_wrapper {
     display: table;
     width: 100%;
-    height: 3507px;
+    height: 1751px;
   }
   .rule {
     border-bottom: 1px solid black;
