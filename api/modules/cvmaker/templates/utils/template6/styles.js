@@ -161,15 +161,13 @@ body {
   padding-bottom: 42%;
   margin: 30px auto;
   overflow: hidden;
-  position: relative;
+  position: relative;  border-radius: 50%;
+
 }
 .user_img {
   display: inline-block;
   position: absolute;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
   border: 4px solid rgb(255, 255, 255);
   box-shadow: 0 0 2px 2px #48494b0a;
 }

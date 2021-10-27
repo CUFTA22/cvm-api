@@ -19,6 +19,6 @@ import { GridFsStorage } from 'multer-gridfs-storage';
 // });
 
 // const uploadFiles = multer({ storage: storage }).single('image');
-const uploadFiles = multer({}).single('image');
+const uploadFiles = multer().single('image');
 
 export default uploadFiles;

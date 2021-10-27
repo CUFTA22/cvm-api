@@ -120,15 +120,13 @@ const styles = (mainColor, lighterColor) => `
     padding-bottom: 80px;
     margin-right: 20px;
     overflow: hidden;
-    position: relative;
+    position: relative;  border-radius: 50%;
+
   }
   .user_img {
     display: inline-block;
     position: absolute;
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
   }
   .user_name {
     font-size: 52px;

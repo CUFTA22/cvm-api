@@ -165,8 +165,6 @@ body {
   display: inline-block;
   position: absolute;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-right: 1px solid ${mainColor};
 }
 .top_banner {

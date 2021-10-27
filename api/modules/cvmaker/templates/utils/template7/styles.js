@@ -203,15 +203,13 @@ body {
   width: 58%;
   padding-bottom: 58%;
   overflow: hidden;
-  position: relative;
+  position: relative;  border-radius: 50%;
+
 }
 .user_img {
   display: inline-block;
   position: absolute;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
   border: 8px solid white;
 }
 

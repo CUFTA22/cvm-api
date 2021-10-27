@@ -19,7 +19,7 @@ export const createCVDocument = (name, params, filename) => {
 export const createPdf = (name, params, img_file, res) => {
     const { fileName, template } = findTemplate(name, params, img_file);
 
-    pdf.create(template).toBuffer((err, buff) => {
+    pdf.create(template, {}).toBuffer((err, buff) => {
         if (err) res.status(400).send('Error creating pdf!');
 
         const base64 = buff.toString('base64');
