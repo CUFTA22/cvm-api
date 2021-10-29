@@ -141,7 +141,8 @@ const styles = (mainColor, lighterColor, pageNo) => `
     background-color: ${mainColor};
     width: 50px;
     display: inline-block;
-    height: ${pageNo * 100}%;
+
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
