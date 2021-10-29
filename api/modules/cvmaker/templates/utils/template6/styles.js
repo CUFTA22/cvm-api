@@ -42,7 +42,6 @@ body {
   left: 0;
 }
 .right {
-  display: inline-block;
   width: 75%;
   margin: 0 0 0 auto;
 
