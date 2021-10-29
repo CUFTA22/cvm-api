@@ -1,13 +1,8 @@
 import transformParams from '../../utils/transformParams';
 import * as svc from './cvmaker.service';
 import tempData from './fullReq.json';
-/**
- * Generate CV PDF
- * @param {object} something
- * @returns {Promise}
- */
 
-export const handlePost = async (req, res) => {
+const handleRequest = (req, res, fn) => {
     const { data } = req.body;
 
     const parsedData = JSON.parse(data);
@@ -17,18 +12,9 @@ export const handlePost = async (req, res) => {
 
     const { name, params } = transformParams(personalInfo, experience, template);
 
-    svc.createPdf(name, params, req.file, res);
+    fn(name, params, req.file, res);
 };
 
-export const handlePostFile = async (req, res) => {
-    const { data } = req.body;
+export const handlePost = async (req, res) => handleRequest(req, res, svc.createPdf);
 
-    const parsedData = JSON.parse(data);
-    // const parsedData = tempData;
-
-    const { personalInfo, experience, template } = parsedData;
-
-    const { name, params } = transformParams(personalInfo, experience, template);
-
-    svc.createPdfFile(name, params, req.file, res);
-};
+export const handlePostFile = async (req, res) => handleRequest(req, res, svc.createPdfFile);

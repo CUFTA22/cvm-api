@@ -1,4 +1,4 @@
-const styles = (mainColor, lighterColor, darkerColor) => `
+const styles = (mainColor, lighterColor, darkerColor, pageNo) => `
 .color_main_txt {
   color: ${mainColor};
 }
@@ -10,6 +10,9 @@ const styles = (mainColor, lighterColor, darkerColor) => `
 }
 html {
   zoom: 0.4;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .pb_before { page-break-before: always !important; } /* Breaks page before of element */
 .pb_after  { page-break-after: always !important; } /* Breaks page after of element */
@@ -27,21 +30,22 @@ html {
 body {
   font-family: Arial, sans-serif;
 }
-.doc_wrapper {
-  display: table;
-  width: 100%;
-  height: 2102px;
-}
+
 .left {
   background-color: rgb(232, 233, 232);
   box-shadow: inset -5px 0 2px #48494b;
   width: 30%;
-  display: table-cell;
-  vertical-align: top;
+  display: inline-block;
+  height: ${pageNo * 100}%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .right {
   display: inline-block;
-  height: 100%;
+  width: 75%;
+  margin: 0 0 0 auto;
+
 }
 .section_head {
   padding: 8px 0;
@@ -169,7 +173,7 @@ body {
   position: absolute;
   width: 100%;
   border: 4px solid rgb(255, 255, 255);
-  box-shadow: 0 0 2px 2px #48494b0a;
+  box-shadow: 0 0 2px 2px #48494b0a; border-radius: 50%;
 }
 
 `;

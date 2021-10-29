@@ -1,4 +1,4 @@
-const styles = (mainColor, lighterColor) => `
+const styles = (mainColor, lighterColor, pageNo) => `
 .pb_before { page-break-before: always !important; } /* Breaks page before of element */
 .pb_after  { page-break-after: always !important; } /* Breaks page after of element */
 .pbi_avoid { page-break-inside: avoid !important; } /* Avoid breaks page in element */
@@ -8,11 +8,10 @@ const styles = (mainColor, lighterColor) => `
   }
   html {
     zoom: 0.4;
-  }
-  .doc_wrapper {
-    display: table;
     width: 100%;
-    height: 2102px;
+    height: 100%;
+    overflow: hidden; 
+    padding-left: 70px;
   }
   .rule {
     border-bottom: 1px solid black;
@@ -141,17 +140,12 @@ const styles = (mainColor, lighterColor) => `
   .left_line {
     background-color: ${mainColor};
     width: 50px;
-    height: 100%;
+    display: inline-block;
+    height: ${pageNo * 100}%;
     position: absolute;
     top: 0;
     left: 0;
   }
-  .doc_wrapper {
-    padding: 0 30px 0 80px; 
-    overflow: hidden; 
-    display: table;
-  }
-
 `;
 
 export default styles;

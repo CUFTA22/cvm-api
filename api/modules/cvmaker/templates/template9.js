@@ -6,7 +6,7 @@ import styles from './utils/template9/styles';
 // | Oxford - Template
 // |---------------------------------------------------
 
-export const template9 = (params, image) => {
+export const template9 = (params, image, pageNo) => {
     // Extract parameters
     let { personalInfo, experience, template } = params;
 
@@ -16,7 +16,7 @@ export const template9 = (params, image) => {
     const lighterColor = adjustColor(mainColor, 120);
 
     // Generate content
-    const css = styles(mainColor, lighterColor);
+    const css = styles(mainColor, lighterColor, pageNo);
     const experienceContent = mapExperience9(experience);
     const personalContent = mapPersonal9(personalInfo);
 
@@ -40,7 +40,7 @@ export const template9 = (params, image) => {
         </style>
       </head>
       <body>
-        <div class="col-lg-8 mx-auto doc_wrapper">
+      <!-- <div class="col-lg-8 mx-auto doc_wrapper"> -->
 
         <div class="left_line"></div>
 
@@ -71,7 +71,7 @@ export const template9 = (params, image) => {
         ${experienceContent}
           
         <br />
-        </div>
+        <!-- </div> -->
       </body>
     </html>
             `;

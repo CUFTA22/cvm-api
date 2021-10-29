@@ -6,7 +6,7 @@ import styles from './utils/template5/styles';
 // | Harvard - Template
 // |---------------------------------------------------
 
-export const template5 = (params, image) => {
+export const template5 = (params, image, pageNo) => {
     // Extract parameters
     let { personalInfo, experience, template } = params;
 
@@ -16,7 +16,7 @@ export const template5 = (params, image) => {
     const lighterColor = adjustColor(mainColor, 140);
 
     // Generate content
-    const css = styles(mainColor, lighterColor);
+    const css = styles(mainColor, lighterColor, pageNo);
     const experienceContent = mapExperience5(experience);
     const personalContent = mapPersonal5(personalInfo, experience);
 
@@ -40,8 +40,8 @@ export const template5 = (params, image) => {
         </style>
       </head>
       <body>
-        <div class="doc_wrapper">
-          <!-- ----------------------------------------------------------------------------------
+      <!-- <div class="doc_wrapper"> -->
+      <!-- ----------------------------------------------------------------------------------
                 - Left Side                                                                     -
                 --------------------------------------------------------------------------------- -->
     
@@ -81,8 +81,8 @@ export const template5 = (params, image) => {
               <br />
             </div>
           </div>
-        </div>
-      </body>
+          <!-- </div> -->
+          </body>
     </html>
             `;
 };

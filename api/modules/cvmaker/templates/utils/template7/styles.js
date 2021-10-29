@@ -1,4 +1,4 @@
-const styles = (mainColor, lighterColor) => `
+const styles = (mainColor, lighterColor, pageNo) => `
 .pb_before { page-break-before: always !important; } /* Breaks page before of element */
 .pb_after  { page-break-after: always !important; } /* Breaks page after of element */
 .pbi_avoid { page-break-inside: avoid !important; } /* Avoid breaks page in element */
@@ -24,6 +24,9 @@ const styles = (mainColor, lighterColor) => `
 }
 html {
   zoom: 0.4;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .rule {
   border-bottom: 1px solid black;
@@ -44,15 +47,19 @@ body {
   height: 2102px;
 }
 .left {
-  display: inline-block;
   width: 30%;
-  display: table-cell;
-  vertical-align: top;
+  display: inline-block;
+  height: ${pageNo * 100}%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
 }
 .right {
-  display: inline-block;
-  height: 100%;
   padding-top: 70px !important;
+  width: 75%;
+  margin: 0 0 0 auto;
+
 }
 .section_head {
   padding: 8px 0;
@@ -210,7 +217,7 @@ body {
   display: inline-block;
   position: absolute;
   width: 100%;
-  border: 8px solid white;
+  border: 8px solid white;border-radius: 50%;
 }
 
 `;

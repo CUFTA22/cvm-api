@@ -5,7 +5,7 @@ import styles from './utils/template4/styles';
 // | Stanford - Template
 // |---------------------------------------------------
 
-export const template4 = (params, image) => {
+export const template4 = (params, image, pageNo) => {
     // Extract parameters
     let { personalInfo, experience, template } = params;
 
@@ -14,7 +14,7 @@ export const template4 = (params, image) => {
     const mainColor = template.value;
 
     // Generate content
-    const css = styles(mainColor);
+    const css = styles(mainColor, pageNo);
     const experienceContent = mapExperience4(experience);
     const personalContent = mapPersonal4(personalInfo, experience);
 
@@ -38,8 +38,8 @@ export const template4 = (params, image) => {
         </style>
       </head>
       <body>
-        <div class="doc_wrapper">
-          <!-- ----------------------------------------------------------------------------------
+      <!-- <div class="doc_wrapper"> -->
+      <!-- ----------------------------------------------------------------------------------
                 - Left Side                                                                     -
                 --------------------------------------------------------------------------------- -->
     
@@ -80,8 +80,8 @@ export const template4 = (params, image) => {
               <br />
             </div>
           </div>
-        </div>
-      </body>
+          <!-- </div> -->
+          </body>
     </html>
                 `;
 };

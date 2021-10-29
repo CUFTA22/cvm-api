@@ -1,4 +1,4 @@
-const styles = (mainColor) => `
+const styles = (mainColor, pageNo) => `
 .color_main_txt {
   color: ${mainColor};
 }
@@ -10,6 +10,9 @@ const styles = (mainColor) => `
 }
 html {
   zoom: 0.4;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .rule {
   border-bottom: 1px solid black;
@@ -24,21 +27,18 @@ html {
 body {
   font-family: Arial, sans-serif;
 }
-.doc_wrapper {
-  display: table;
-  width: 100%;
-  height: 2102px;
-}
 .left {
   color: rgb(251, 251, 251);
-  display: inline-block;
   width: 30%;
-  display: table-cell;
-  vertical-align: top;
+  display: inline-block;
+  height: ${pageNo * 100}%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .right {
-  display: inline-block;
-  height: 100%;
+  width: 75%;
+  margin: 0 0 0 auto;
 }
 .section_head {
   padding: 8px 0;
@@ -120,7 +120,7 @@ body {
 .user_img {
   position: absolute;
   width: 100%;
-  border: 2px solid rgb(235, 235, 234);
+  border: 2px solid rgb(235, 235, 234);border-radius: 50%;
 }
 `;
 

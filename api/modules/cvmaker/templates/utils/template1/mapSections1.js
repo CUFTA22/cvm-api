@@ -31,6 +31,8 @@ export const mapExperience1 = (experiences) => {
             case 'educationAndSkills':
             case 'workExperience':
             case 'courses':
+                // if (true) result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <div class="section_head col-lg-8 row text-center mx-auto bg-light">
                     ${findIcon(key, 'section_icon')}

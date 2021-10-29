@@ -6,7 +6,7 @@ import styles from './utils/template7/styles';
 // | Cambridge - Template
 // |---------------------------------------------------
 
-export const template7 = (params, image) => {
+export const template7 = (params, image, pageNo) => {
     // Extract parameters
     let { personalInfo, experience, template } = params;
 
@@ -16,7 +16,7 @@ export const template7 = (params, image) => {
     const lighterColor = adjustColor(mainColor, 120);
 
     // Generate content
-    const css = styles(mainColor, lighterColor);
+    const css = styles(mainColor, lighterColor, pageNo);
     const experienceContent = mapExperience7(experience);
     const personalContent = mapPersonal7(personalInfo, experience);
 
@@ -40,7 +40,7 @@ export const template7 = (params, image) => {
         </style>
       </head>
       <body>
-        <div class="doc_wrapper">
+      <!-- <div class="doc_wrapper"> -->
           <!-- ----------------------------------------------------------------------------------
                 - Left Side                                                                     -
                 --------------------------------------------------------------------------------- -->
@@ -76,7 +76,7 @@ export const template7 = (params, image) => {
               <br />
             </div>
           </div>
-        </div>
+          <!-- </div> -->
       </body>
     </html>
     

@@ -6,7 +6,7 @@ import styles from './utils/template6/styles';
 // | Edinburgh - Template
 // |---------------------------------------------------
 
-export const template6 = (params, image) => {
+export const template6 = (params, image, pageNo) => {
     // Extract parameters
     let { personalInfo, experience, template } = params;
 
@@ -17,7 +17,7 @@ export const template6 = (params, image) => {
     const lighterColor = adjustColor(mainColor, 120);
 
     // Generate content
-    const css = styles(mainColor, lighterColor, darkerColor);
+    const css = styles(mainColor, lighterColor, darkerColor, pageNo);
     const experienceContent = mapExperience6(experience);
     const personalContent = mapPersonal6(personalInfo, experience);
 
@@ -41,7 +41,7 @@ export const template6 = (params, image) => {
         </style>
       </head>
       <body>
-        <div class="doc_wrapper">
+        <!-- <div class="doc_wrapper"> -->
           <!-- ----------------------------------------------------------------------------------
                 - Left Side                                                                     -
                 --------------------------------------------------------------------------------- -->
@@ -94,7 +94,7 @@ export const template6 = (params, image) => {
               <br />
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </body>
     </html>
     

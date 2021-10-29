@@ -6,7 +6,7 @@ import styles from './utils/template8/styles';
 // | Auckland - Template
 // |---------------------------------------------------
 
-export const template8 = (params, image) => {
+export const template8 = (params, image, pageNo) => {
     // Extract parameters
 
     let { personalInfo, experience, template } = params;
@@ -18,7 +18,7 @@ export const template8 = (params, image) => {
     const lighterColor = adjustColor(mainColor, 120);
 
     // Generate content
-    const css = styles(mainColor, lighterColor, darkerColor);
+    const css = styles(mainColor, lighterColor, darkerColor, pageNo);
     const experienceContent = mapExperience8(experience);
     const personalContent = mapPersonal8(personalInfo, experience);
 
@@ -42,7 +42,7 @@ export const template8 = (params, image) => {
         </style>
       </head>
       <body>
-        <div class="doc_wrapper">
+      <!-- <div class="doc_wrapper"> -->
 
             <div class="top_banner">
                 <div class="banner_img">
@@ -58,6 +58,7 @@ export const template8 = (params, image) => {
                 --------------------------------------------------------------------------------- -->
     
           <div
+
             class="left col-3"
             style="padding: 20px 20px 40px 20px; overflow: hidden"
           >
@@ -85,7 +86,7 @@ export const template8 = (params, image) => {
               <br />
             </div>
           </div>
-        </div>
+          <!-- </div> -->
       </body>
     </html>
     `;

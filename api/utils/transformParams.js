@@ -14,11 +14,13 @@ const transformParams = (personalInfo, experience, template) => {
             title: 'address',
         },
     };
+
     delete params.personalInfo.city;
     delete params.personalInfo.postcode;
     delete params.personalInfo.firstName;
     delete params.personalInfo.lastName;
     delete params.personalInfo.avatarImage;
+    delete params.personalInfo.rawImage;
 
     return { name, params };
 };

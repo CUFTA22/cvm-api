@@ -38,6 +38,8 @@ export const mapExperience5 = (experiences) => {
             case 'educationAndSkills':
             case 'workExperience':
             case 'courses':
+                // if (true) result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <hr />
                 <div class="section_head row mx-auto">
