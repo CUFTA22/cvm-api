@@ -14,6 +14,7 @@ export const createPdf = (name, params, img_file, res) => {
 
         if (PDFS_LEFT.includes(name)) {
             pdfPage(cv1Buffer).then((pdfData) => {
+                console.log(pdfData.numpages);
                 const { template: template2 } = findTemplate(name, params, img_file, pdfData.numpages);
 
                 pdfGen.create(template2, {}).toBuffer((err, buff) => {
@@ -46,6 +47,7 @@ export const createPdfFile = (name, params, img_file, res) => {
             pdfPage(cv1Buffer).then((pdfData) => {
                 console.log(pdfData.numpages);
                 const { fileName: fn2, template: template2 } = findTemplate(name, params, img_file, pdfData.numpages);
+
                 pdfGen.create(template2, {}).toFile(`documents/${fn2}.pdf`, (err, pdf) => {
                     if (err) res.status(400).send('Error creating pdf!');
                     res.status(201).sendFile(pdf.filename);
