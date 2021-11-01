@@ -13,7 +13,11 @@ import findTemplate from './templates';
 
 const PDFS_LEFT = ['template4', 'template5', 'template6', 'template8', 'template9'];
 
-const countPages1 = (buffer) => {};
+const countPages1 = (buffer) => {
+    const count = buffer.toString().match(/\/Type[\s]*\/Page[^s]/g).length;
+    return count;
+};
+
 const countPages2 = async (buffer) => {
     const pdf = await PDFDocument.load(buffer);
     return pdf.getPageCount();
@@ -33,7 +37,7 @@ export const createPdf = (name, params, img_file, res) => {
         const cv1Buffer = buff;
 
         if (PDFS_LEFT.includes(name)) {
-            const noOfPages = await countPages2(cv1Buffer);
+            const noOfPages = await countPages1(cv1Buffer);
             console.log(noOfPages);
 
             const { template: template2 } = findTemplate(name, params, img_file, noOfPages);
@@ -74,7 +78,7 @@ export const createPdfFile = (name, params, img_file, res) => {
 
         if (PDFS_LEFT.includes(name)) {
             let cv1Buffer = fs.readFileSync(pdf.filename);
-            const noOfPages = await countPages2(cv1Buffer);
+            const noOfPages = countPages1(cv1Buffer);
 
             console.log(noOfPages);
             const { fileName: fn2, template: template2 } = findTemplate(name, params, img_file, noOfPages);
