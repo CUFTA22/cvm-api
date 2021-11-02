@@ -142,7 +142,7 @@ const styles = (mainColor, lighterColor, pageNo) => `
     width: 50px;
     display: inline-block;
 
-    height: 100%;
+    height: ${pageNo * 100}%;
     position: absolute;
     top: 0;
     left: 0;

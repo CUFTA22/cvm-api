@@ -30,7 +30,7 @@ const formatFinalPDF = async (buffer, pageNo) => {
 
     console.log('Last page txt: ' + pdfJSText.items.length);
 
-    // if (!pdfJSText.items.length) pdfDoc.removePage(pageNo);
+    if (!pdfJSText.items.length) pdfDoc.removePage(pageNo);
 
     const newPdf = await pdfDoc.saveAsBase64();
 
