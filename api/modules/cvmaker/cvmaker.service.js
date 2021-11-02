@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import pdfJS from 'pdfjs-dist';
+import pdfJS from 'pdfjs-dist/es5/build/pdf';
 import pdfGen from 'html-pdf';
 import fs from 'fs';
 
