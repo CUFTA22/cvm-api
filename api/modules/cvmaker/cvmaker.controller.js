@@ -1,12 +1,10 @@
 import transformParams from '../../utils/transformParams';
 import * as svc from './cvmaker.service';
-import tempData from './fullReq.json';
 
 const handleRequest = (req, res, fn) => {
     const { data } = req.body;
 
     const parsedData = JSON.parse(data);
-    // const parsedData = tempData;
 
     const { personalInfo, experience, template } = parsedData;
 
