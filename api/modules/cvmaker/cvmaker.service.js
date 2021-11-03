@@ -19,24 +19,28 @@ const countPages1 = (buffer) => {
 };
 
 const formatFinalPDF = async (buffer, pageNo) => {
-    const pdfDoc = await PDFDocument.load(buffer);
-    const unit8 = new Uint8Array(buffer);
+    try {
+        const pdfDoc = await PDFDocument.load(buffer);
+        const unit8 = new Uint8Array(buffer);
 
-    // Detect if there's empty page and remove it
+        // Detect if there's empty page and remove it
 
-    const pdfJSDoc = await pdfJS.getDocument({ data: unit8 }).promise;
-    const pdfJSPage = await pdfJSDoc.getPage(pageNo);
-    const pdfJSText = await pdfJSPage.getTextContent();
+        const pdfJSDoc = await pdfJS.getDocument({ data: unit8 }).promise;
+        const pdfJSPage = await pdfJSDoc.getPage(pageNo);
+        const pdfJSText = await pdfJSPage.getTextContent();
 
-    console.log('Last page txt: ' + pdfJSText.items.length);
+        console.log('Last page txt: ' + pdfJSText.items.length);
 
-    if (!pdfJSText.items.length) pdfDoc.removePage(pageNo);
+        if (!pdfJSText.items.length) pdfDoc.removePage(pageNo - 1);
 
-    const newPdf = await pdfDoc.saveAsBase64();
+        const newPdf = await pdfDoc.saveAsBase64();
 
-    // Split pages in array
+        // Split pages in array
 
-    return newPdf;
+        return newPdf;
+    } catch (error) {
+        return buffer;
+    }
 };
 
 // ------------------------------------------------------------------------------------------
