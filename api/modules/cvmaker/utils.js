@@ -13,7 +13,7 @@ export const countPages1 = (buffer) => {
 };
 
 export const splitPdfPages = (pdf) => {
-    const buffer = new Buffer(pdf);
+    const buffer = new Buffer.from(pdf);
     const readStream = new muhammara.PDFRStreamForBuffer(buffer);
 
     const pdfReader = muhammara.createReader(readStream);
