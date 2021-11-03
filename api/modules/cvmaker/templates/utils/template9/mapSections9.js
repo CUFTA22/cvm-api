@@ -32,7 +32,8 @@ export const mapExperience9 = (experiences) => {
             case 'educationAndSkills':
             case 'workExperience':
             case 'courses':
-                // if (true) result = result.concat(`<div style="page-break-before: always;"></div>`);
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
 
                 result = result.concat(`<div class="section_head col-lg-8 row text-center mx-auto">
                                     <span style="font-size: 28px;">${experiences[key].title}</span>
@@ -66,6 +67,9 @@ export const mapExperience9 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'references':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`<div class="section_head col-lg-8 row text-center mx-auto">
                                     <span style="font-size: 28px;">${experiences[key].title}</span>
                                 </div>
@@ -96,6 +100,9 @@ export const mapExperience9 = (experiences) => {
 
             case 'languages':
             case 'skills':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`<div class="section_head col-lg-8 row text-center mx-auto">
                                     <span style="font-size: 28px;">${experiences[key].title}</span>
                                 </div>
@@ -124,6 +131,12 @@ export const mapExperience9 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'interests':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                                 <div class="section_head col-lg-8 row text-center mx-auto">
                                     <span style="font-size: 28px;">${experiences[key].title}</span>
@@ -136,6 +149,9 @@ export const mapExperience9 = (experiences) => {
                 break;
 
             default:
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <div class="section_head col-lg-8 row text-center mx-auto">
                     <span style="font-size: 28px;">${experiences[key].title}</span>

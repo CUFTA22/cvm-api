@@ -31,7 +31,8 @@ export const mapExperience1 = (experiences) => {
             case 'educationAndSkills':
             case 'workExperience':
             case 'courses':
-                // if (true) result = result.concat(`<div style="page-break-before: always;"></div>`);
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
 
                 result = result.concat(`
                 <div class="section_head col-lg-8 row text-center mx-auto bg-light">
@@ -59,6 +60,9 @@ export const mapExperience1 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'references':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <div class="section_head col-lg-8 row text-center mx-auto bg-light">
                     ${findIcon(key, 'section_icon')}
@@ -86,6 +90,9 @@ export const mapExperience1 = (experiences) => {
 
             case 'languages':
             case 'skills':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <div class="section_head col-lg-8 row text-center mx-auto bg-light">
                     ${findIcon(key, 'section_icon')}
@@ -110,6 +117,9 @@ export const mapExperience1 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'interests':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                                 <div class="section_head col-lg-8 row text-center mx-auto bg-light">
                                     ${findIcon(key, 'section_icon')}
@@ -123,6 +133,9 @@ export const mapExperience1 = (experiences) => {
                 break;
 
             default:
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <div class="section_head col-lg-8 row text-center mx-auto bg-light">
                     ${findIcon(key, 'section_icon')}

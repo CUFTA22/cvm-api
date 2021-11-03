@@ -36,7 +36,8 @@ export const mapExperience4 = (experiences) => {
             case 'educationAndSkills':
             case 'workExperience':
             case 'courses':
-                // if (true) result = result.concat(`<div style="page-break-before: always;"></div>`);
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
 
                 result = result.concat(`
                 <div class="section_head row mx-auto">
@@ -66,6 +67,9 @@ export const mapExperience4 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'references':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`<div class="section_head row mx-auto">
                 <span>${experiences[key].title}</span>
               </div>
@@ -90,6 +94,9 @@ export const mapExperience4 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'skills':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`<div class="section_head row mx-auto">
                 <span>${experiences[key].title}</span>
               </div>
@@ -111,6 +118,9 @@ export const mapExperience4 = (experiences) => {
                 break;
 
             default:
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <div class="section_head row mx-auto">
                 <span>${experiences[key].title}</span>

@@ -26,7 +26,8 @@ export const mapExperience3 = (experiences) => {
             case 'educationAndSkills':
             case 'workExperience':
             case 'courses':
-                // if (true) result = result.concat(`<div style="page-break-before: always;"></div>`);
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
 
                 result = result.concat(`
                     <hr />
@@ -53,6 +54,9 @@ export const mapExperience3 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'references':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`<hr />
                 <div class="section_head col-lg-8 row mx-auto">
                     <span>${experiences[key].title}</span>
@@ -78,6 +82,9 @@ export const mapExperience3 = (experiences) => {
 
             case 'languages':
             case 'skills':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`<hr />
                 <div class="section_head col-lg-8 row mx-auto">
                     <span>${experiences[key].title}</span>
@@ -101,6 +108,9 @@ export const mapExperience3 = (experiences) => {
             // -------------------------------------------------------------------------------------------------
 
             case 'interests':
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                                 <hr />
                                 <div class="section_head col-lg-8 row mx-auto">
@@ -114,6 +124,9 @@ export const mapExperience3 = (experiences) => {
                 break;
 
             default:
+                if (experiences[key]?.pageBreak)
+                    result = result.concat(`<div style="page-break-before: always;"></div>`);
+
                 result = result.concat(`
                 <hr />
                 <div class="section_head col-lg-8 row mx-auto">
