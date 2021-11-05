@@ -3,10 +3,6 @@ import pdfJS from 'pdfjs-dist/es5/build/pdf';
 import muhammara from 'muhammara';
 import streams from 'memory-streams';
 
-function typedArrayToBuffer(array) {
-    return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset);
-}
-
 export const countPages1 = (buffer) => {
     const count = buffer.toString().match(/\/Type[\s]*\/Page[^s]/g).length;
     return count;
