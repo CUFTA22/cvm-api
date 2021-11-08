@@ -17,10 +17,9 @@ export const createPdf = (name, params, img_file, res) => {
 
     pdfGen.create(template1, {}).toBuffer(async (err, buff1) => {
         if (err) res.status(400).send('Error creating pdf!');
+        const noOfPages = await countPages1(buff1);
 
         if (PDFS_LEFT.includes(name)) {
-            const noOfPages = await countPages1(buff1);
-
             const { template: template2 } = findTemplate(name, params, img_file, noOfPages);
 
             pdfGen.create(template2, {}).toBuffer(async (err, buff2) => {
@@ -31,7 +30,9 @@ export const createPdf = (name, params, img_file, res) => {
                 res.status(201).send(finalPdf);
             });
         } else {
-            res.status(201).send(buff1.toString('base64'));
+            const finalPdf = await formatFinalPDF(buff1, noOfPages);
+
+            res.status(201).send(finalPdf);
         }
     });
 };
